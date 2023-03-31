@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview Test</title>
+</head>
+<body>
+<h1>Interview Test</h1>
+<p>Upload the test file and fill in the table below</p>
+<form action="/" method="POST" enctype="multipart/form-data">
+    <input type="file" name="upload_file"><br/><br/>
+    <input type="submit">
+    <br/>
+</form>
+<br/>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    {% for item in items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.contact }}</td>
+            <td>{{ item.country }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
